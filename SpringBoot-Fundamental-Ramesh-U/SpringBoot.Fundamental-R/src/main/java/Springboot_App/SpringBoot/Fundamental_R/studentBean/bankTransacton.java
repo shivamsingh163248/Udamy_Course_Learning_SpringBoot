@@ -1,5 +1,7 @@
 package Springboot_App.SpringBoot.Fundamental_R.studentBean;
 
+import jdk.dynalink.beans.StaticClass;
+
 import java.util.List;
 
 public class bankTransacton {
@@ -10,14 +12,15 @@ public class bankTransacton {
     private String fatherName ;
 
     // creating the constructor of the class
-
+    private int totalAmount ;
 
     private List<TranslationDetails>translationDetails ;
 
-    public bankTransacton(int accountNumber, String name, String fatherName) {
+    public bankTransacton(int accountNumber, String name, String fatherName ) {
         this.accountNumber = accountNumber;
         this.name = name;
         this.fatherName = fatherName;
+
     }
 
     public int getAccountNumber() {
@@ -42,6 +45,11 @@ public class bankTransacton {
 
     public void setFatherName(String fatherName) {
         this.fatherName = fatherName;
+    }
+
+
+    public static void addTotalAmount(int amount){
+
     }
 
 

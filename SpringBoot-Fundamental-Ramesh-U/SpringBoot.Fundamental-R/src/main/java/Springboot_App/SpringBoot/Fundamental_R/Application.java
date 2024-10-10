@@ -1,5 +1,6 @@
 package Springboot_App.SpringBoot.Fundamental_R;
 
+import Springboot_App.SpringBoot.Fundamental_R.studentBean.TranslationDetails;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -17,6 +18,8 @@ public class Application {
 		for(String beans :bean){
 			System.out.println(bean);
 		}
+
+
 
 	}
 

@@ -7,7 +7,7 @@ public class TranslationDetails {
     private int date  ;
     private  int debitAmount ;
     private int CreditAmount;
-    private static int totalAmount ;
+
 
     public int getAmount() {
         return amount;
@@ -41,13 +41,7 @@ public class TranslationDetails {
         CreditAmount = creditAmount;
     }
 
-    public static int getTotalAmount() {
-        return totalAmount;
-    }
 
-    public static void setTotalAmount(int totalAmount) {
-        TranslationDetails.totalAmount = totalAmount;
-    }
 
 
     public TranslationDetails(int amount, int date, int debitAmount, int creditAmount) {
