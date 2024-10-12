@@ -58,7 +58,7 @@ public class bankTransacton {
     // creating the all the details
     public void Transaction(){
 
-        TranslationDetails details = new TranslationDetails(344 ,)
+        TranslationDetails details = new TranslationDetails(344 ,0,45) ;
 
     }
 
