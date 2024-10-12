@@ -2,6 +2,7 @@ package Springboot_App.SpringBoot.Fundamental_R.studentBean;
 
 import jdk.dynalink.beans.StaticClass;
 
+import java.util.Date;
 import java.util.List;
 
 public class bankTransacton {
@@ -16,10 +17,11 @@ public class bankTransacton {
 
     private List<TranslationDetails>translationDetails ;
 
-    public bankTransacton(int accountNumber, String name, String fatherName ) {
+    public bankTransacton(int accountNumber, String name, String fatherName , int totalAmount ) {
         this.accountNumber = accountNumber;
         this.name = name;
         this.fatherName = fatherName;
+        this.totalAmount = totalAmount ;
 
     }
 
@@ -51,6 +53,17 @@ public class bankTransacton {
     public static void addTotalAmount(int amount){
 
     }
+
+
+    // creating the all the details
+    public void Transaction(){
+
+        TranslationDetails details = new TranslationDetails(344 ,)
+
+    }
+
+
+
 
 
 }

@@ -1,10 +1,14 @@
 package Springboot_App.SpringBoot.Fundamental_R.studentBean;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+
 public class TranslationDetails {
 
     // creating the TranslationDetails
     private int amount;
-    private int date  ;
+    private LocalDateTime date ;
     private  int debitAmount ;
     private int CreditAmount;
 
@@ -17,13 +21,7 @@ public class TranslationDetails {
         this.amount = amount;
     }
 
-    public int getDate() {
-        return date;
-    }
 
-    public void setDate(int date) {
-        this.date = date;
-    }
 
     public int getDebitAmount() {
         return debitAmount;
@@ -44,9 +42,9 @@ public class TranslationDetails {
 
 
 
-    public TranslationDetails(int amount, int date, int debitAmount, int creditAmount) {
+    public TranslationDetails(int amount, int debitAmount, int creditAmount) {
         this.amount = amount;
-        this.date = date;
+        date = LocalDateTime.now() ;
         this.debitAmount = debitAmount;
         CreditAmount = creditAmount;
     }
