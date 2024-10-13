@@ -39,7 +39,9 @@ public class TranslationDetails {
         CreditAmount = creditAmount;
     }
 
-
+    public TranslationDetails(int debitAmount) {
+        this.debitAmount = debitAmount;
+    }
 
 
     public TranslationDetails(int amount, int debitAmount, int creditAmount) {
