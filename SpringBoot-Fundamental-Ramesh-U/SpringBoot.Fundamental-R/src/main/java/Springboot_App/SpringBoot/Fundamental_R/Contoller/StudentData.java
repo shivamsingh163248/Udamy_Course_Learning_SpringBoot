@@ -24,6 +24,13 @@ public class StudentData {
         return new StudentDetails("shvam singh " , 3434 , "satyendra kumar singh " , "sarita singh ") ;
     }
 
+    // again creating the to return the different details
+    @GetMapping("/shivam")
+    public StudentDetails shivam(){
+        return new StudentDetails("my name is shivam singh " , 242211017 ,"satyendra kumar singh " ,"sarita singh ") ;
+    }
+    // this is the new api
+
     // creating the api for the return data in the form of list in the jason
     @GetMapping("/allStudent")
     public List<StudentDetails> AllStudentData(){
