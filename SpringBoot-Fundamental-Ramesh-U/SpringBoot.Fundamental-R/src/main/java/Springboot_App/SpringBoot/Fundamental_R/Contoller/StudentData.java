@@ -1,6 +1,8 @@
 package Springboot_App.SpringBoot.Fundamental_R.Contoller;
 
 import Springboot_App.SpringBoot.Fundamental_R.bean.StudentDetails;
+import Springboot_App.SpringBoot.Fundamental_R.studentBean.AllAccount;
+import Springboot_App.SpringBoot.Fundamental_R.studentBean.bankTransacton;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -56,6 +58,9 @@ public class StudentData {
         return AllStudents.get(id) ;
 
     }
+
+
+
 
 
 }

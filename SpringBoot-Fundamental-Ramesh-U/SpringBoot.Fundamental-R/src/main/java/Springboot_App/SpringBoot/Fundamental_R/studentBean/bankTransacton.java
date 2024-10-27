@@ -2,7 +2,7 @@ package Springboot_App.SpringBoot.Fundamental_R.studentBean;
 
 
 
-import java.util.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 public class bankTransacton {
@@ -22,6 +22,7 @@ public class bankTransacton {
         this.name = name;
         this.fatherName = fatherName;
         this.totalAmount = totalAmount ;
+        translationDetails = new ArrayList<>() ;
 
     }
 
@@ -56,7 +57,7 @@ public class bankTransacton {
 
 
     // creating the all the details
-    public void Transaction(){
+    public void Transaction(int transaction){
 
         TranslationDetails details = new TranslationDetails(344 ,60,45) ;
         TranslationDetails details1 = new TranslationDetails(345 ,50,405) ;
