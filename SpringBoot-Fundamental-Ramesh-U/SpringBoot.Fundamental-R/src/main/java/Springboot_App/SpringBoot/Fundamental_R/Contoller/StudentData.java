@@ -67,6 +67,9 @@ public class StudentData {
                                         @RequestParam String name ,
                                         @RequestParam String fatherName ){
 
+        // creating the object of the student details
+        return new StudentDetails(name , id , fatherName , "sarita singh ");
+
     }
 
 
