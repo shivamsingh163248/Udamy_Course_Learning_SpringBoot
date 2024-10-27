@@ -15,7 +15,7 @@ public class bankTransacton {
     // creating the constructor of the class
     private int totalAmount ;
 
-    private List<TranslationDetails>translationDetails ;
+    public List<TranslationDetails>translationDetails ;
 
     public bankTransacton(int accountNumber, String name, String fatherName , int totalAmount ) {
         this.accountNumber = accountNumber;
@@ -23,6 +23,9 @@ public class bankTransacton {
         this.fatherName = fatherName;
         this.totalAmount = totalAmount ;
         translationDetails = new ArrayList<>() ;
+        Transaction() ;
+
+
 
     }
 
@@ -57,7 +60,7 @@ public class bankTransacton {
 
 
     // creating the all the details
-    public void Transaction(int transaction){
+    public void Transaction(){
 
         TranslationDetails details = new TranslationDetails(344 ,60,45) ;
         TranslationDetails details1 = new TranslationDetails(345 ,50,405) ;

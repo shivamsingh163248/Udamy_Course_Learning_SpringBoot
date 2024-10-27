@@ -18,6 +18,7 @@ public class AllAccount {
     // CREATING method add all
     public AllAccount(){
         AllAccountList = new ArrayList<>() ;
+
         AllAccountList.add(f1) ;
         AllAccountList.add(f2) ;
         AllAccountList.add(f3) ;

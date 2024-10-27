@@ -3,6 +3,7 @@ package Springboot_App.SpringBoot.Fundamental_R.StudetController;
 
 
 import Springboot_App.SpringBoot.Fundamental_R.studentBean.AllAccount;
+import Springboot_App.SpringBoot.Fundamental_R.studentBean.TranslationDetails;
 import Springboot_App.SpringBoot.Fundamental_R.studentBean.bankTransacton;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -49,19 +50,16 @@ public  class StudentApi {
         return null ;
     }
 
-    // creating the api for the return the all the account details
-    @GetMapping("/allAccount/{ac}/{amount}")
-    public bankTransacton allAccount(@PathVariable("ac") int accountNumber , @PathVariable("amount") int amount){
+    // creating the api to return transaction details of the account number
+    @GetMapping("/allAccount/{ac}/transaction")
+    public ArrayList<TranslationDetails> allAccountTransaction(@PathVariable("ac") int accountNumber){
         AllAccount account = new AllAccount() ;
         for(bankTransacton object : account.AllAccountList){
             if(object.getAccountNumber() == accountNumber){
-                object.addTotalAmount(amount);
-                return object ;
+                return (ArrayList<TranslationDetails>) object.translationDetails;
             }
         }
         return null ;
     }
-
-    // creating the api for the return transaction details OF PARTICULAR ACOUNT
 
 }
