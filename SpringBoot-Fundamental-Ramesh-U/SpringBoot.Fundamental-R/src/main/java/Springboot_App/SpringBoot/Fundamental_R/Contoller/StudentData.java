@@ -5,6 +5,7 @@ import Springboot_App.SpringBoot.Fundamental_R.studentBean.AllAccount;
 import Springboot_App.SpringBoot.Fundamental_R.studentBean.bankTransacton;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -56,6 +57,15 @@ public class StudentData {
 
         // now creating the loop and details
         return AllStudents.get(id) ;
+
+    }
+
+    // creating the api with the query parameter
+    // creating the method of the values
+    @GetMapping("/StudentMapping/query")
+    public StudentDetails DynamicObject(@RequestParam int id ,
+                                        @RequestParam String name ,
+                                        @RequestParam String fatherName ){
 
     }
 
