@@ -58,7 +58,17 @@ public class bankTransacton {
     // creating the all the details
     public void Transaction(){
 
-        TranslationDetails details = new TranslationDetails(344 ,0,45) ;
+        TranslationDetails details = new TranslationDetails(344 ,60,45) ;
+        TranslationDetails details1 = new TranslationDetails(345 ,50,405) ;
+        TranslationDetails details2 = new TranslationDetails(346 ,80,485) ;
+        TranslationDetails details3 = new TranslationDetails(347 ,7,4545) ;
+
+        // now adding all the transaction done by detail
+        translationDetails.add(details1) ;
+        translationDetails.add(details) ;
+        translationDetails.add(details2) ;
+        translationDetails.add(details3) ;
+
 
     }
 
