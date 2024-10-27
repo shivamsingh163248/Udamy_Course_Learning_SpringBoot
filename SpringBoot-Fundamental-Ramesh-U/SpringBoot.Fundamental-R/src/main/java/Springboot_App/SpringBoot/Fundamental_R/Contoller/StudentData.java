@@ -3,10 +3,8 @@ package Springboot_App.SpringBoot.Fundamental_R.Contoller;
 import Springboot_App.SpringBoot.Fundamental_R.bean.StudentDetails;
 import Springboot_App.SpringBoot.Fundamental_R.studentBean.AllAccount;
 import Springboot_App.SpringBoot.Fundamental_R.studentBean.bankTransacton;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,6 +72,20 @@ public class StudentData {
     }
 
     // now learning the post mapping the @postmapping and @requestBody
+    // now we are the solving the post mapping directly convert to json
+    @PostMapping("Student/updating")
+    public StudentDetails addDetails(@RequestBody StudentDetails details){
+        // now printing all the details
+        // and the return all the
+
+        // @ResponseStatus(HttpStatus.CREATED) // that are the using
+        System.out.println(details.getFatherName());
+        System.out.println(details.getMotherName());
+        System.out.println(details.getName());
+        System.out.println(details.getRollNo());
+        return details ;
+    }
+
 
 
 
