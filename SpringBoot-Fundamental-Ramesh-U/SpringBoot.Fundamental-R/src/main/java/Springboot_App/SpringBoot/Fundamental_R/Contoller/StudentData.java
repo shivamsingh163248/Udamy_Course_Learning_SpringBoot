@@ -62,6 +62,7 @@ public class StudentData {
 
     // creating the api with the query parameter
     // creating the method of the values
+    //http://localhost:8080/StudentMapping/query?id=1&name=%22shivam%20singh%20%22&fatherName=%22satyendra%20kumar%20singh%22
     @GetMapping("/StudentMapping/query")
     public StudentDetails DynamicObject(@RequestParam int id ,
                                         @RequestParam String name ,
@@ -71,6 +72,8 @@ public class StudentData {
         return new StudentDetails(name , id , fatherName , "sarita singh ");
 
     }
+
+    // now learning the post mapping the @postmapping and @requestBody
 
 
 
