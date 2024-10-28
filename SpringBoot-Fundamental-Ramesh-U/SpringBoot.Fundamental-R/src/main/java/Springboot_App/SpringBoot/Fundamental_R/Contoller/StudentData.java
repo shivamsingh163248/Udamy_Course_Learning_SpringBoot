@@ -74,6 +74,7 @@ public class StudentData {
     // now learning the post mapping the @postmapping and @requestBody
     // now we are the solving the post mapping directly convert to json
     @PostMapping("Student/updating")
+    @ResponseStatus(HttpStatus.CREATED)
     public StudentDetails addDetails(@RequestBody StudentDetails details){
         // now printing all the details
         // and the return all the
