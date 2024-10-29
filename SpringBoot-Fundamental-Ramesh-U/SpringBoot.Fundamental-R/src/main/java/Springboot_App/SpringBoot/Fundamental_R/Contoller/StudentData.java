@@ -4,6 +4,7 @@ import Springboot_App.SpringBoot.Fundamental_R.bean.StudentDetails;
 import Springboot_App.SpringBoot.Fundamental_R.studentBean.AllAccount;
 import Springboot_App.SpringBoot.Fundamental_R.studentBean.bankTransacton;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -21,9 +22,19 @@ public class StudentData {
 
 
     @GetMapping("/studentDetails")
-    public StudentDetails studentDetails(){
+    public  StudentDetails studentDetails(){
         return new StudentDetails("shvam singh " , 3434 , "satyendra kumar singh " , "sarita singh ") ;
     }
+
+    // this api creating the two method using the response entity
+    @GetMapping("/studentDetails")
+    public ResponseEntity<StudentDetails> studentDetailsResponse(){
+        StudentDetails studentDetails = new StudentDetails("shvam singh " , 3434 , "satyendra kumar singh " , "sarita singh ") ;
+        return new ResponseEntity<>(studentDetails , HttpStatus.OK) ;
+    }
+
+
+
 
     // again creating the to return the different details
     @GetMapping("/shivam")
@@ -105,6 +116,9 @@ public class StudentData {
         System.out.print(student);
         return "successfully deleted values " ;
     }
+
+
+    // now learning the response entity class
 
 
 
