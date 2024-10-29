@@ -27,10 +27,25 @@ public class StudentData {
     }
 
     // this api creating the two method using the response entity
-    @GetMapping("/studentDetails")
+    @GetMapping("/studentDetails/Response")
     public ResponseEntity<StudentDetails> studentDetailsResponse(){
         StudentDetails studentDetails = new StudentDetails("shvam singh " , 3434 , "satyendra kumar singh " , "sarita singh ") ;
         return new ResponseEntity<>(studentDetails , HttpStatus.OK) ;
+    }
+
+    // learning the another method for the using
+    @GetMapping("/studentDetails/Response/Tpye")
+    public ResponseEntity<StudentDetails> studentDetailsResponseSecondMethod(){
+        StudentDetails studentDetails = new StudentDetails("shvam singh " , 3434 , "satyendra kumar singh " , "sarita singh ") ;
+        return ResponseEntity.ok(studentDetails) ;
+    }
+
+    // also you are the using return the with header
+    // creating the same method for the return with header method
+    @GetMapping("/studentDetails/Response/Tpyes")
+    public ResponseEntity<StudentDetails> studentDetailsResponseSecondMethodWithHeader(){
+        StudentDetails studentDetails = new StudentDetails("shvam singh " , 3434 , "satyendra kumar singh " , "sarita singh ") ;
+        return ResponseEntity.ok().header("testAPI","test").body(studentDetails) ;
     }
 
 
@@ -54,6 +69,19 @@ public class StudentData {
         AllStudent.add(new StudentDetails("anuj singh " , 4354675 , "rb singh " , "geeta signh")) ;
         AllStudent.add(new StudentDetails("lovely singh " , 8369 , "taj singh " , "mata rani")) ;
         return AllStudent;
+    }
+
+    // CREATING THE LIST as the response
+    @GetMapping("/allStudent/Response/e")
+    public ResponseEntity<List<StudentDetails>> AllStudentDataResponseE(){
+
+        // creating the list and adding the all the data in the list
+        List<StudentDetails>AllStudent = new ArrayList<>() ;
+        // creating the object of the class and the adding in the list
+        AllStudent.add(new StudentDetails("shivam" , 3443 , "satyendra kumar singh " , "sarita singh ")) ;
+        AllStudent.add(new StudentDetails("anuj singh " , 4354675 , "rb singh " , "geeta signh")) ;
+        AllStudent.add(new StudentDetails("lovely singh " , 8369 , "taj singh " , "mata rani")) ;
+        return ResponseEntity.ok(AllStudent) ;
     }
 
     // creating the learning the path parameter
