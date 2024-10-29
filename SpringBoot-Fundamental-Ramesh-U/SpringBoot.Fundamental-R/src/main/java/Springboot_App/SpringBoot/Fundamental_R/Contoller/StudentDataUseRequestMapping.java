@@ -18,4 +18,10 @@ public class StudentDataUseRequestMapping {
         StudentDetails studentDetails = new StudentDetails("itisha singh " , 544445 , "satyendra kumar singh " , "saritia singh") ;
         return new ResponseEntity<>(studentDetails , HttpStatus.OK) ;
     }
+
+    @GetMapping("/itisha")
+    public ResponseEntity<StudentDetails>test1(){
+        StudentDetails studentDetails = new StudentDetails("itisha singh " , 544445 , " itisha satyendra kumar singh " , " itisha saritia singh") ;
+        return new ResponseEntity<>(studentDetails , HttpStatus.OK) ;
+    }
 }
