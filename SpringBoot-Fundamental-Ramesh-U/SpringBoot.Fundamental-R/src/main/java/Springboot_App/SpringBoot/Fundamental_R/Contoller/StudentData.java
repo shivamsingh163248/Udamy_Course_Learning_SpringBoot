@@ -89,9 +89,9 @@ public class StudentData {
 
     // now we are the learning the put request for the updating something in the field
     // creating the put request
-    @PostMapping("student/{id}/postData")
+    @PutMapping("student/{id}/postData") // forgot to use @request body
     @ResponseStatus(HttpStatus.CREATED)
-    public StudentDetails UpdatingStudent(StudentDetails details , @PathVariable("id") int StudentId){
+    public StudentDetails UpdatingStudent(@RequestBody StudentDetails details , @PathVariable("id") int StudentId){
 
         // now printing the name and father name and the mother name
         System.out.println(details.getName());
