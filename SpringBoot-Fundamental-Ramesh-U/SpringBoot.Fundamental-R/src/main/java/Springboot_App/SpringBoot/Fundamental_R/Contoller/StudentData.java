@@ -125,6 +125,19 @@ public class StudentData {
         System.out.println(details.getRollNo());
         return details ;
     }
+    @PostMapping("Student/updating/test")
+    @ResponseStatus(HttpStatus.CREATED)
+    public ResponseEntity<StudentDetails> addDetailsUpdating(@RequestBody StudentDetails details){
+        // now printing all the details
+        // and the return all the
+
+        // @ResponseStatus(HttpStatus.CREATED) // that are the using
+        System.out.println(details.getFatherName());
+        System.out.println(details.getMotherName());
+        System.out.println(details.getName());
+        System.out.println(details.getRollNo());
+        return new ResponseEntity<>(details , HttpStatus.CREATED) ;
+    }
 
     // now we are the learning the put request for the updating something in the field
     // creating the put request
