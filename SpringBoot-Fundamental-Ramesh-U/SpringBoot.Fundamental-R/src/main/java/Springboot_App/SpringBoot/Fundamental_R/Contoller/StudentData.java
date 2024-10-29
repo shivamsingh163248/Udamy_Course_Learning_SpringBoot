@@ -99,6 +99,13 @@ public class StudentData {
         return  details ;
     }
 
+    // creating the  handel the delete request which are the existing resource
+    @DeleteMapping("student/{id}/deleted")
+    public  String deleteMapping(@PathVariable("id") int student){
+        System.out.print(student);
+        return "successfully deleted values " ;
+    }
+
 
 
 
