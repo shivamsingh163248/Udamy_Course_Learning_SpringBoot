@@ -1,6 +1,7 @@
 package JPA.Learning.Hibernet.entity;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -26,6 +27,8 @@ public class Product {
     private String Description ;
     private boolean active ;
     private String imageUrl ;
+    // creating the time spent annotation in the spring boot
+    @CreationTimestamp
     private LocalDateTime dataDateTimeCreated ;
     private LocalDateTime lastUpdate ;
 
