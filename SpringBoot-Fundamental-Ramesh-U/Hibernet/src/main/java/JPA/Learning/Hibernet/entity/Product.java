@@ -13,6 +13,9 @@ public class Product {
     // crating all the properties of the product
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.TABLE)
+//    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String ProductName;
     private String sku ;
