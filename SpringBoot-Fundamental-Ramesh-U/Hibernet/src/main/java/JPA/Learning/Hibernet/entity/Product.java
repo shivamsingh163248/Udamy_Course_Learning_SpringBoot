@@ -1,9 +1,6 @@
 package JPA.Learning.Hibernet.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.persistence.UniqueConstraint;
+import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
@@ -15,11 +12,13 @@ public class Product {
 
     // crating all the properties of the product
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String ProductName;
     private String sku ;
 
     // using the colum for the creating a nullable and length and other parameter
+    @Column(nullable = false)
     private int price;
     private String Description ;
     private boolean active ;
