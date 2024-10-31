@@ -1,10 +1,15 @@
 package JPA.Learning.Hibernet.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.time.LocalDateTime;
 
+@Entity
 public class Product {
 
     // crating all the properties of the product
+    @Id
     private Long id;
     private String ProductName;
     private String sku ;
