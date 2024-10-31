@@ -15,7 +15,6 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-
 @Entity
 @Table(name = "ProductLog" , schema = "ecommerse" , uniqueConstraints = {
         @UniqueConstraint(name = "PName" , columnNames = "ProductName")
