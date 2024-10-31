@@ -2,10 +2,15 @@ package JPA.Learning.Hibernet.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "ProductLog" , schema = "ecommerse" , uniqueConstraints = {
+        @UniqueConstraint(name = "PName" , columnNames = "ProductName")
+})
 public class Product {
 
     // crating all the properties of the product
@@ -14,6 +19,7 @@ public class Product {
     private String ProductName;
     private String sku ;
 
+    // using the colum for the creating a nullable and length and other parameter
     private int price;
     private String Description ;
     private boolean active ;
