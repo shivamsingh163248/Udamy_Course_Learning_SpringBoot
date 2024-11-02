@@ -44,6 +44,12 @@ public class Product {
     private LocalDateTime lastUpdate ;
 
     // creating the getter and setter method
+    public Long getId() {
+        return id;
+    }
+
+
+
 
 
 }
