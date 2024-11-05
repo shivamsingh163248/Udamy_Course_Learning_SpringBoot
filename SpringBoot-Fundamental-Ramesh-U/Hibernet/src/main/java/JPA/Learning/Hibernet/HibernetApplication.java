@@ -11,6 +11,8 @@ public class HibernetApplication implements CommandLineRunner {
 		SpringApplication.run(HibernetApplication.class, args);
 	}
 
+
+	// second method for the run
 	@Override
 	public void run(String... args) throws Exception {
 
