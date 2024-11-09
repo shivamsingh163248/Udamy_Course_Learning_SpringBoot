@@ -60,7 +60,17 @@ class ProductRepositoryTest {
 
     }
 
+// fetching the product using the find by id
+    @Test
+    void findByIdMethod(){
+        Long id  = 1L ;
 
+        // Now Retrieve data from the databases
+        Product product = productRepository.findById(id).get() ;
+
+        // now check the printing of the product
+        System.out.println(product);
+    }
 
 
 }
