@@ -78,6 +78,28 @@ class ProductRepositoryTest {
     @Test
     void saveAllMethod(){
         // we are the learning the save all the method
+        // creating the object
+        Product product1 = new Product()  ;
+        product1.setId(2L);
+        product1.setProductName("Mi");
+        product1.setSku("this is the mi phone ");
+        product1.setPrice(6000);
+        product1.setDescription("This is the best phone");
+        product1.setActive(true);
+        product1.setImageUrl("https://www.google.com");
+
+
+
+        // creating the dummy object and set tha the value
+        Product product2 = new Product() ;
+        product2.setId(3L);
+        product2.setProductName("Samsung");
+        product2.setSku("This is the samsung phone");
+        product2.setPrice(1000);
+        product2.setDescription("This is the best phone");
+        product2.setActive(true);
+        product2.setImageUrl("https://www.google.com");
+
 
     }
 
