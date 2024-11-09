@@ -73,4 +73,13 @@ class ProductRepositoryTest {
     }
 
 
+    // again creating and the learning the saveALL method
+    // creating the method name save all the method
+    @Test
+    void saveAllMethod(){
+        // we are the learning the save all the method
+
+    }
+
+
 }
