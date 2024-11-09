@@ -131,6 +131,37 @@ class ProductRepositoryTest {
 
     }
 
+    // creating the method using the delete method using
+    @Test
+    void delete(){
+
+        // in this method, delete something in the data using delete method
+
+        Product product = productRepository.findById(2L).get() ;
+
+        // now this object to use delete product
+        productRepository.delete(product);
+
+    }
+
+    // creating the method using the deleteAllMethod
+    @Test
+    void DeleteAll(){
+
+        productRepository.deleteAll();
+    }
+
+
+    @Test
+    void DeleteAllMethod(){
+        // delete all  the method are the using
+        Product product = productRepository.findById(102L).get() ;
+        Product product1 = productRepository.findById(152L).get() ;
+
+        // using the Delete all the method
+        productRepository.deleteAll(List.of(product1, product));
+    }
+
     
 
 
