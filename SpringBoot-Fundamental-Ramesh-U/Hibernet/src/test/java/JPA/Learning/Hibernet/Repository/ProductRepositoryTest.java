@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
@@ -99,6 +101,10 @@ class ProductRepositoryTest {
         product2.setDescription("This is the best phone");
         product2.setActive(true);
         product2.setImageUrl("https://www.google.com");
+
+        // now using the save all the method
+        productRepository.saveAll(List.of(product1,product2)) ; // this is the list of the product
+
 
 
     }
