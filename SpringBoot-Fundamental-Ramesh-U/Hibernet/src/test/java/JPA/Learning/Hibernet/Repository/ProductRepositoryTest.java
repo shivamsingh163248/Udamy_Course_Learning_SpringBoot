@@ -43,6 +43,23 @@ class ProductRepositoryTest {
     // creating the updating in the database repository
     // creating the method for the using the test annotation
 
+    @Test
+    void Updating(){
+
+        // TAKING THE OBJECT IN  THE PRODUCT AND USING THE BIDGET AND GET
+        Long id  = 1L ;
+        Product UpdatingProduct = productRepository.findById(id).get() ;
+        UpdatingProduct.setPrice(454);
+        UpdatingProduct.setProductName("iPhone15");
+
+        // we are the updating the two quantity
+
+        // using the save method to save the all
+        productRepository.save(UpdatingProduct) ;
+
+
+    }
+
 
 
 
