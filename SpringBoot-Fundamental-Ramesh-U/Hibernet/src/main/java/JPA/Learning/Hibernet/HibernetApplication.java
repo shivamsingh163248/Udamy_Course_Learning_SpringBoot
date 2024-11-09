@@ -1,5 +1,6 @@
 package JPA.Learning.Hibernet;
 
+import jakarta.persistence.Table;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,4 +18,8 @@ public class HibernetApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 
 	}
+
+
+
+
 }

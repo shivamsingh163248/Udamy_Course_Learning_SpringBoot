@@ -162,7 +162,15 @@ class ProductRepositoryTest {
         productRepository.deleteAll(List.of(product1, product));
     }
 
-    
+    // creating the count method returns the total row in the table
+    @Test
+    void count(){
+
+        // return the all table in the numnber in the data base
+        Long number = productRepository.count() ;
+        System.out.println(number);
+    }
+
 
 
 }
