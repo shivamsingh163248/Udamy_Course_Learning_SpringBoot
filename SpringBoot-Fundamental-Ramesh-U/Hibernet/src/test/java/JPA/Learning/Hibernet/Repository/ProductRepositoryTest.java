@@ -109,5 +109,17 @@ class ProductRepositoryTest {
 
     }
 
+    // learning the find all the method
+    @Test
+    void FindAllMethod(){
+
+        // creating the product list and retrieve all the data from the databases
+        List<Product>allData = productRepository.findAll() ;
+        // now print all data
+        allData.forEach((e)->{
+            System.out.println(e.getProductName());
+        });
+    }
+
 
 }
