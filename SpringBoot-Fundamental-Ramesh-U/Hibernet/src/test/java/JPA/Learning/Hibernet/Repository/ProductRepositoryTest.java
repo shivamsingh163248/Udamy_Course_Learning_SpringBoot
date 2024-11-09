@@ -121,5 +121,17 @@ class ProductRepositoryTest {
         });
     }
 
+    // creating the method of the deleteById
+    @Test
+    void DeleteById(){
+
+        // now using the data in the database using the delete by the id
+        productRepository.deleteById(1L);
+        // Now Exacting the Query
+
+    }
+
+    
+
 
 }
