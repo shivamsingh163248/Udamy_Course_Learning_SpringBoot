@@ -57,5 +57,23 @@ public class QueryMethodTest {
 
     }
 
+    // now creating the method of the and
+
+    @Test
+    void MultiModalAndMethod(){
+
+        // multi filed attribute using the and
+        // its return the list of the that object
+        List<Product> productList = productRepository.findByPriceAndSku(6000 , "This is the samsung phone") ;
+
+        // creating the for each loop
+        productList.forEach((e) -> {
+
+            // showing the result
+            System.out.println(e.getId());
+            System.out.println(e.getProductName());
+        });
+
+    }
 
 }

@@ -27,7 +27,8 @@ public interface ProductRepository extends JpaRepository<Product , Long> {
     // using the Query my multiple name
     public List<Product> findByPriceOrSku(int prise , String sku) ;
 
-
+      // also writing for the And Method
+      public List<Product> findByPriceAndSku(int prise , String sku) ;
 
 
 }
