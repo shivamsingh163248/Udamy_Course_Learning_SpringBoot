@@ -11,7 +11,8 @@ public interface ProductRepository extends JpaRepository<Product , Long> {
 /*    Return the found product entry by using its name as a search
     criteria. if no product entry is found, this method returns null*/
 
-    public Product findByName(String name) ;
+    public Product findByPrice(int prices) ;
+    public Product findBySku(String sku) ;
 
 
 
