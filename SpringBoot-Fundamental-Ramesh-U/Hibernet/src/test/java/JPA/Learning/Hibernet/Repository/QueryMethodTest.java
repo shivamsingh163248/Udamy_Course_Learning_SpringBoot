@@ -111,7 +111,12 @@ public class QueryMethodTest {
         // its return the list
         List<Product>productList = productRepository.findByPriceLessThan(new BigDecimal(6000)) ;
         // creating the for each loop for the retrieve all the record
-
+productList.forEach((e) ->{
+    System.out.println(e.getPrice());
+    System.out.println(e.getDescription());
+    System.out.println(e.getSku());
+    System.out.println(e.getProductName());
+});
     }
 
 
