@@ -104,7 +104,15 @@ public class QueryMethodTest {
 
     }
 
+ // creating the method of the less then
+    @Test
+    void LessThenMethod(){
 
+        // its return the list
+        List<Product>productList = productRepository.findByPriceLessThan(new BigDecimal(6000)) ;
+        // creating the for each loop for the retrieve all the record
+
+    }
 
 
 }

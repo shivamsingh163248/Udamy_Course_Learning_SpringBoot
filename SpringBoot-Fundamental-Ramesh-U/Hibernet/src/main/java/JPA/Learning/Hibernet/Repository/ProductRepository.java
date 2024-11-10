@@ -39,5 +39,8 @@ public interface ProductRepository extends JpaRepository<Product , Long> {
      // Its is the return type is list
      public  List<Product> findByPriceGreaterThan(BigDecimal prise) ;
 
+     // creating the less then method
+    public  List<Product>findByPriceLessThan(BigDecimal prise) ;
+
 
 }
