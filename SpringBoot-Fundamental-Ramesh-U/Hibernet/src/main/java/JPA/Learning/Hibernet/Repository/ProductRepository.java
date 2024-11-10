@@ -42,5 +42,8 @@ public interface ProductRepository extends JpaRepository<Product , Long> {
      // creating the less then method
     public  List<Product>findByPriceLessThan(BigDecimal prise) ;
 
+    // return the filter record with the given name
+     public List<Product>findBySkuContaining(String sku) ;
+
 
 }

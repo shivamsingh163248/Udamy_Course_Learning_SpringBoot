@@ -120,4 +120,21 @@ productList.forEach((e) ->{
     }
 
 
+    // return the method name of the match in the databases that list are the return
+    @Test
+    void FindByNameContains(){
+        // calling the method from the interface of the product repository that extends a jpa
+        List<Product>productList  = productRepository.findBySkuContaining("This is the samsung phone") ;
+
+        // now printing all record in the databases
+        productList.forEach((e) -> {
+            System.out.println(e.getPrice());
+            System.out.println(e.getDescription());
+
+        });
+    }
+
+
+
+
 }
