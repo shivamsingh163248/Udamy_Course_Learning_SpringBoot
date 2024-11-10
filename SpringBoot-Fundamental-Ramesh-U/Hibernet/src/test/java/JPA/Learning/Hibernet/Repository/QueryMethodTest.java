@@ -18,6 +18,9 @@ public class QueryMethodTest {
         Product product = productRepository.findByPrice(1000) ;
 
         // its return the all the object
+        // printing all the details
+        System.out.println(product.getId());
+        System.out.println(product.getProductName());
 
         Product product1 = productRepository.findBySku("This is the samsung phone") ;
 
