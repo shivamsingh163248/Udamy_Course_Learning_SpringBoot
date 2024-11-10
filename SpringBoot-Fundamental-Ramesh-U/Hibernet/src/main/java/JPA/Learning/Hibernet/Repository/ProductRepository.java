@@ -45,5 +45,12 @@ public interface ProductRepository extends JpaRepository<Product , Long> {
     // return the filter record with the given name
      public List<Product>findBySkuContaining(String sku) ;
 
+     // findByLike
+    public List<Product>findBySkuLike(String sku) ;
+
+    // findByBetween
+    public List<Product>findByPriceBetween(BigDecimal prise , BigDecimal price) ;
+
+
 
 }

@@ -135,6 +135,34 @@ productList.forEach((e) ->{
     }
 
 
+    // learning the like method
+    @Test
+    void FindByLikeMethod(){
+        // hear we are the learning the like method
+        List<Product>AllProduct = productRepository.findBySkuLike("This is the samsung phone") ;
+        // creating the foreach loop for the testing of the each object containing in the list
+        AllProduct.forEach((e) ->{
+
+            System.out.println(e.getPrice());
+            System.out.println(e.getDescription());
+
+        });
+    }
+
+
+    // creating the method for the between
+    @Test
+    void FindByBetweenMethod(){
+
+        // we are the learning method
+        List<Product>AllPriseRange = productRepository.findByPriceBetween(new BigDecimal(500) , new BigDecimal(1100)) ;
+        // creating the for each loop for the iterating all the object
+        AllPriseRange.forEach((e)->{
+            System.out.println(e.getProductName());
+        });
+    }
+
+
 
 
 }
