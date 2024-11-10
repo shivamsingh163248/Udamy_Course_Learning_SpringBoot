@@ -92,10 +92,19 @@ public class QueryMethodTest {
     @Test
     void findByPriceGreaterThanMethod(){
         // calling the function
-        List<Product> productList = productRepository.findByPriceGreaterThan(new BigDecimal(1000)) ;
+        List<Product> productList = productRepository.findByPriceGreaterThan(new BigDecimal(100)) ;
         // and the printing all details in the record
+        // creating the for each loop for the printing all the object
+        productList.forEach((e) ->{
+            System.out.println(e.getPrice());
+            System.out.println(e.getDescription());
+            System.out.println(e.getSku());
+            System.out.println(e.getProductName());
+        });
 
     }
+
+
 
 
 }
