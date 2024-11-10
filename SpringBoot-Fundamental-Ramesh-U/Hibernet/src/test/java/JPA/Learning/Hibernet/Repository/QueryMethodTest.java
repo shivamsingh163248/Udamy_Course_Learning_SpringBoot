@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @SpringBootTest
@@ -75,5 +76,26 @@ public class QueryMethodTest {
         });
 
     }
+
+ // learning the finddisticby method
+ @Test
+ void Distinct(){
+        // calling the method
+     Product product = productRepository.findDistinctByPrice(6000);
+     // printing all the details of the require fetch from the data bases
+     System.out.println(product.getProductName());
+     System.out.println(product.getDescription());
+     System.out.println(product.getSku());
+ }
+
+ // learning the greater than method using the Query
+    @Test
+    void findByPriceGreaterThanMethod(){
+        // calling the function
+        List<Product> productList = productRepository.findByPriceGreaterThan(new BigDecimal(1000)) ;
+        // and the printing all details in the record
+
+    }
+
 
 }

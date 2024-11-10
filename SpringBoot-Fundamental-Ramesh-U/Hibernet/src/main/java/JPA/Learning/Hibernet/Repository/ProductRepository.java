@@ -3,6 +3,7 @@ package JPA.Learning.Hibernet.Repository;
 import JPA.Learning.Hibernet.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,6 +30,14 @@ public interface ProductRepository extends JpaRepository<Product , Long> {
 
       // also writing for the And Method
       public List<Product> findByPriceAndSku(int prise , String sku) ;
+
+
+      // creating the and learning the unique and distinct method
+     public  Product findDistinctByPrice(int prise) ;
+
+     // learning the find byGreater then
+     // Its is the return type is list
+     public  List<Product> findByPriceGreaterThan(BigDecimal prise) ;
 
 
 }
