@@ -171,6 +171,20 @@ class ProductRepositoryTest {
         System.out.println(number);
     }
 
+    @Test
+    void EcistByID(){
+
+        // creating the exist
+        Long id  = 1L ;
+
+        // Existing  by id using return the boolean 
+        boolean result = productRepository.existsById(id) ;
+        // now printing
+        System.out.println(result);
+
+
+    }
+
 
 
 }
