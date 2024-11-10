@@ -3,6 +3,8 @@ package JPA.Learning.Hibernet.Repository;
 import JPA.Learning.Hibernet.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.Optional;
+
 public interface ProductRepository extends JpaRepository<Product , Long> {
 
 
@@ -13,6 +15,9 @@ public interface ProductRepository extends JpaRepository<Product , Long> {
 
     public Product findByPrice(int prices) ;
     public Product findBySku(String sku) ;
+
+    // using the optional method writing the find the by id
+    Optional<Product>findById(Long id) ;
 
 
 

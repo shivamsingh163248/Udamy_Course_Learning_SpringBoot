@@ -26,4 +26,15 @@ public class QueryMethodTest {
 
     }
 
+    // creating the j unit test method
+    @Test
+    void findByID(){
+
+        // calling the method find by product
+        Product product = productRepository.findById(153L).get() ;
+        // Printing all the details
+        System.out.println(product.getSku());
+        System.out.println(product.getDescription());
+    }
+
 }
