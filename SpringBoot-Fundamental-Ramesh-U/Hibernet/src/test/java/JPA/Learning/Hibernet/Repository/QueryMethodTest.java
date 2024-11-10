@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.List;
+
 @SpringBootTest
 public class QueryMethodTest {
 
@@ -36,5 +38,24 @@ public class QueryMethodTest {
         System.out.println(product.getSku());
         System.out.println(product.getDescription());
     }
+//
+//    @Test
+//    void  findByProductMethod(){
+//        Product product = productRepository.findByProductName("Samsung");
+//    }
+
+
+    // now writing the test case for the
+    @Test
+    void MultiModalQuery(){
+        List<Product>ProductList = productRepository.findByPriceOrSku(1000, "This is the samsung phone");
+
+        // creating the for each loop printing the object
+        ProductList.forEach((e) -> {
+            System.out.println(e.getId());
+        });
+
+    }
+
 
 }

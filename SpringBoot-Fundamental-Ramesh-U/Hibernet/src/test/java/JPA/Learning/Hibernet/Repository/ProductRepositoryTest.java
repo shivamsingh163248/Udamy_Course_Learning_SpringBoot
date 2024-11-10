@@ -95,7 +95,7 @@ class ProductRepositoryTest {
         // creating the dummy object and set tha the value
         Product product2 = new Product() ;
         product2.setId(3L);
-        product2.setProductName("Samsung");
+        product2.setProductName("Samsungs");
         product2.setSku("This is the samsung phone");
         product2.setPrice(1000);
         product2.setDescription("This is the best phone");
