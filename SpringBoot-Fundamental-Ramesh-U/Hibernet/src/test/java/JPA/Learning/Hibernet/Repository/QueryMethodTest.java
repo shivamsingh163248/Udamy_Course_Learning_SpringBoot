@@ -44,6 +44,7 @@ public class QueryMethodTest {
 //    void  findByProductMethod(){
 //        Product product = productRepository.findByProductName("Samsung");
 //    }
+    // learning Query Method
 
 
     // now writing the test case for the
