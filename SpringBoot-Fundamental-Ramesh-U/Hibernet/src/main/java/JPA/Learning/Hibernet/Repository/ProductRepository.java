@@ -4,6 +4,7 @@ import JPA.Learning.Hibernet.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -52,6 +53,7 @@ public interface ProductRepository extends JpaRepository<Product , Long> {
     public List<Product>findByPriceBetween(BigDecimal prise , BigDecimal price) ;
 
     // creating the between method using the data and time
+    public List<Product>findByDataDateTimeCreated(LocalDateTime time1 , LocalDateTime time2) ;
 
 
 
