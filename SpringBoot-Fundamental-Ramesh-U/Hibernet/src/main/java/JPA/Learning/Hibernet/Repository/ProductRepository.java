@@ -56,7 +56,8 @@ public interface ProductRepository extends JpaRepository<Product , Long> {
     public List<Product>findByDataDateTimeCreatedBetween(LocalDateTime time1 , LocalDateTime time2) ;
 
 
-
+    // learning the in method findByNameIn
+    public List<Product>findByProductNameIn(List<String>name) ;
 
 
 }

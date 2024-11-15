@@ -183,6 +183,15 @@ productList.forEach((e) ->{
         List<Product> allListBtween = productRepository.findByDataDateTimeCreatedBetween(dateTime, localDateTime);
     }
 
+    @Test
+    void InMethod(){
+        // creating the method
+         // calling the method
+        List<Product>allDetails = productRepository.findByProductNameIn(List.of("Samsung" , "Mi")) ;
+        // now printing the list
+
+    }
+
 
 
 
