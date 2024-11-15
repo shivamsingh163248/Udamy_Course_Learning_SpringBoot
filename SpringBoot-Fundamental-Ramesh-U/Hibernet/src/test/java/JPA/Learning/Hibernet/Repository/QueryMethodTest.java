@@ -163,6 +163,21 @@ productList.forEach((e) ->{
         });
     }
 
+    // learning the between method in the query
+    @Test
+    void  LearningBetween(){
+
+        // now writing the method
+        List<Product>Between = productRepository.findByPriceBetween(new BigDecimal(1000) , new BigDecimal(6000));
+        // return the list
+        // using the for each loop we are the printing All the details
+        // using the for each loop you can print all the details
+
+    }
+
+
+
+
 
 
 
