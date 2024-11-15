@@ -177,16 +177,10 @@ productList.forEach((e) ->{
     }
 
     @Test
-    void DataTimeBetween(){
-
-        // now fetching the data between data
-        // creating the variable of the data and time
-        LocalDateTime localDateTime = LocalDateTime.of(2024 , 11 , 9 ,18 , 54 , 37) ;
-        // again creating the second parameter
-        LocalDateTime dateTime =  LocalDateTime.of(2024 , 11 , 9 ,15 , 34 , 37) ;
-
-        // creating the list variable to return all the data from
-
+    void DataTimeBetween() {
+        LocalDateTime localDateTime = LocalDateTime.of(2024, 11, 9, 18, 54, 37);
+        LocalDateTime dateTime = LocalDateTime.of(2024, 11, 9, 15, 34, 37);
+        List<Product> allListBtween = productRepository.findByDataDateTimeCreatedBetween(dateTime, localDateTime);
     }
 
 

@@ -53,7 +53,7 @@ public interface ProductRepository extends JpaRepository<Product , Long> {
     public List<Product>findByPriceBetween(BigDecimal prise , BigDecimal price) ;
 
     // creating the between method using the data and time
-    public List<Product>findByDataDateTimeCreated(LocalDateTime time1 , LocalDateTime time2) ;
+    public List<Product>findByDataDateTimeCreatedBetween(LocalDateTime time1 , LocalDateTime time2) ;
 
 
 
