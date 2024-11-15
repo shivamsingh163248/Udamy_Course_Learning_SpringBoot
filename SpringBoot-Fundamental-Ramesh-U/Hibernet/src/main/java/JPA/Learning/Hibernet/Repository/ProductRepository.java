@@ -59,5 +59,9 @@ public interface ProductRepository extends JpaRepository<Product , Long> {
     // learning the in method findByNameIn
     public List<Product>findByIdIn(List<Long>id) ;
 
+    // first find by order des and Asc using the Query method
+
+    public List<Product>findFirst2ByOrderByPriceAsc() ;
+
 
 }

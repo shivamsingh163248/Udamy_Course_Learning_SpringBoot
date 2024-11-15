@@ -196,6 +196,21 @@ productList.forEach((e) ->{
         });
     }
 
+    // creating the method and learning find fist by order by name desc
+    @Test
+    void FindFistByOrderByNameAsc(){
+
+        // calling the method and the printing the price
+        List<Product>AllPrise = productRepository.findFirst2ByOrderByPriceAsc() ;
+
+        // printing all the price
+        // creating the for each loop
+        AllPrise.forEach((e) ->{
+            System.out.println(e.getPrice());
+        });
+
+    }
+
 
 
 
