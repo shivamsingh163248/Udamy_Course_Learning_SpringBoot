@@ -187,9 +187,13 @@ productList.forEach((e) ->{
     void InMethod(){
         // creating the method
          // calling the method
-        List<Product>allDetails = productRepository.findByProductNameIn(List.of("Samsung" , "Mi")) ;
+        List<Product>allDetails = productRepository.findByIdIn(List.of(153L , 252L)) ;
         // now printing the list
-
+        allDetails.forEach((e) -> {
+            // printing the prise and id
+            System.out.println(e.getDescription());
+            System.out.println(e.getId());
+        });
     }
 
 

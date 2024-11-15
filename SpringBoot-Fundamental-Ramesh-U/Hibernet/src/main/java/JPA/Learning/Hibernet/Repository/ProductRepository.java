@@ -57,7 +57,7 @@ public interface ProductRepository extends JpaRepository<Product , Long> {
 
 
     // learning the in method findByNameIn
-    public List<Product>findByProductNameIn(List<String>name) ;
+    public List<Product>findByIdIn(List<Long>id) ;
 
 
 }
