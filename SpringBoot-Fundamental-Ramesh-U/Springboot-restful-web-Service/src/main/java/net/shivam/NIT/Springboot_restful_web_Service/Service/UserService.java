@@ -6,4 +6,9 @@ public interface UserService {
 
     // creating the method userRepository
    public User CreateUser(User user) ;
+
+
+   // creating another method
+    User getByID(Long ID) ;
+
 }
