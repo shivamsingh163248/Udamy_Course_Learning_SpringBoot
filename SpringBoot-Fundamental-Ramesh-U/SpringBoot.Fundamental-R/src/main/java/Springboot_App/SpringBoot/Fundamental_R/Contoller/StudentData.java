@@ -110,8 +110,8 @@ public class StudentData {
 
     }
 
-    // now learning the post mapping the @postmapping and @requestBody
-    // now we are the solving the post mapping directly convert to json
+    // now learning the post-mapping the @postmarking and @requestBody
+    // now we are the solving the post-mapping directly convert to JSON
     @PostMapping("Student/updating")
     @ResponseStatus(HttpStatus.CREATED)
     public StudentDetails addDetails(@RequestBody StudentDetails details){

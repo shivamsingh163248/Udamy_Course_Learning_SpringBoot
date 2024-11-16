@@ -28,5 +28,14 @@ private UserService userService ;
         return new ResponseEntity<>(user1 , HttpStatus.CREATED) ;
     }
 
+    // again creating the post-request using the url
+    // creating the api
+    public ResponseEntity<User>FindById(Long ID){
+
+        // calling the method
+        User details = userService.getByID(ID) ;
+        return new ResponseEntity<>(details, HttpStatus.OK) ;
+    }
+
 
 }
