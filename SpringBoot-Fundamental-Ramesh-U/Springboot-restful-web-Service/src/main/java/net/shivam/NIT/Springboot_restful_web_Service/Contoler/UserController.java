@@ -1,15 +1,15 @@
 package net.shivam.NIT.Springboot_restful_web_Service.Contoler;
 
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
+
 import net.shivam.NIT.Springboot_restful_web_Service.Entity.User;
 import net.shivam.NIT.Springboot_restful_web_Service.Service.Impl.UserServiceImpl;
 import net.shivam.NIT.Springboot_restful_web_Service.Service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.yaml.snakeyaml.tokens.Token;
 
 @RestController
 @AllArgsConstructor
@@ -30,10 +30,12 @@ private UserService userService ;
 
     // again creating the post-request using the url
     // creating the api
-    public ResponseEntity<User>FindById(Long ID){
+    // also using the path variable
+    @GetMapping("{Id}")
+    public ResponseEntity<User>FindById(@PathVariable("Id") Long Id){
 
         // calling the method
-        User details = userService.getByID(ID) ;
+        User details = userService.getByID(Id) ;
         return new ResponseEntity<>(details, HttpStatus.OK) ;
     }
 
