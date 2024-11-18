@@ -35,6 +35,7 @@ private UserService userService ;
     public ResponseEntity<User>FindById(@PathVariable("Id") Long Id){
 
         // calling the method
+        // find the data using the id
         User details = userService.getByID(Id) ;
         return new ResponseEntity<>(details, HttpStatus.OK) ;
     }
