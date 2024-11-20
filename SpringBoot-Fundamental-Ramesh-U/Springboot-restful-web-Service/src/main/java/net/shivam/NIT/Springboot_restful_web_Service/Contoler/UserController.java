@@ -11,6 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.yaml.snakeyaml.tokens.Token;
 
+import java.util.List;
+
 @RestController
 @AllArgsConstructor
 @RequestMapping("api/all")
@@ -38,6 +40,15 @@ private UserService userService ;
         // find the data using the id
         User details = userService.getByID(Id) ;
         return new ResponseEntity<>(details, HttpStatus.OK) ;
+    }
+
+    // now creating the api for  the all the user
+    @GetMapping("/allUser")
+    public ResponseEntity<List<User>>AllUser(){
+        // now calling the method
+        // creating the list method returns the list
+        List<User>allDataValues = userService.AllUser() ;
+        return new ResponseEntity<>(allDataValues , HttpStatus.OK) ;
     }
 
 
