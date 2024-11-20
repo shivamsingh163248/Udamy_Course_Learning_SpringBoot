@@ -6,6 +6,7 @@ import net.shivam.NIT.Springboot_restful_web_Service.Reposistory.UserReposistory
 import net.shivam.NIT.Springboot_restful_web_Service.Service.UserService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -26,8 +27,16 @@ public class UserServiceImpl implements UserService {
         // inside parameter with Counterculture
         // fetch the data from the database and the return user
       Optional<User>details =  userReposistory.findById(Id) ;
-      // using the get function we return user details
+      // using the get function, we return user details
       return details.get() ;
     }
+
+  @Override
+  public List<User> AllUser() {
+    List<User>Values = userReposistory.findAll() ;
+    // return the values
+  }
+
+  //
 
 }
