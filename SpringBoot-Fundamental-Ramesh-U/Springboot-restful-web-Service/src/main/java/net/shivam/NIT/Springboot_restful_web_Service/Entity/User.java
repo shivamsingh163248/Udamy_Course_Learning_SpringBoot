@@ -21,10 +21,13 @@ public class User {
     private Long id ;
 
     @Column(nullable = false)
-    private String fistName ;
-    @Column(nullable = false)
-    private String lastName ;
+    private String name ;
+
     @Column(nullable = false , unique = true)
     private String email ;
+    @Column
+    private Long password ;
+    @Column
+    boolean enabled;
 
 }
