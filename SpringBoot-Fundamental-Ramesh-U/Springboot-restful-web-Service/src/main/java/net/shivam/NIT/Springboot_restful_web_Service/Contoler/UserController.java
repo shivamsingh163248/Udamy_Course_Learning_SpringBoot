@@ -15,6 +15,7 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
+@CrossOrigin(origins = "http://127.0.0.1:5500")
 @RequestMapping("api/all")
 public class UserController {
 
@@ -51,5 +52,6 @@ private UserService userService ;
         return new ResponseEntity<>(allDataValues , HttpStatus.OK) ;
     }
 
+    // creating the put request
 
 }
