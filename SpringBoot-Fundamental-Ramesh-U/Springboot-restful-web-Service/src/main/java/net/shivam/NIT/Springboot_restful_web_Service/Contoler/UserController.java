@@ -53,5 +53,13 @@ private UserService userService ;
     }
 
     // creating the put request
+    @PutMapping("{Id}")
+    public ResponseEntity<User>UpdateData(@PathVariable("Id") Long Id , @RequestBody User user){
+        // calling the method
+        // update the data
+        User user1 = userService.CreateUser(user) ;
+        return new ResponseEntity<>(user1 , HttpStatus.OK) ;
+    }
+
 
 }
