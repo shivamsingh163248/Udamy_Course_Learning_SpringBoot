@@ -60,6 +60,7 @@ private UserService userService ;
         User user1 = userService.CreateUser(user) ;
         return new ResponseEntity<>(user1 , HttpStatus.OK) ;
     }
+    // now updating the data using the delete request
 
 
 }
