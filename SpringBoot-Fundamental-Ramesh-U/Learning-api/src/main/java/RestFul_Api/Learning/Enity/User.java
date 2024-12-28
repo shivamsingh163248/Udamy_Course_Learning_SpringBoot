@@ -25,6 +25,6 @@ public class User {
     @Column(nullable = false , unique = true)
     private int RollNo ;
     @Column(nullable = false , unique = true)
-    private int email ;
+    private String email ;
 
 }
