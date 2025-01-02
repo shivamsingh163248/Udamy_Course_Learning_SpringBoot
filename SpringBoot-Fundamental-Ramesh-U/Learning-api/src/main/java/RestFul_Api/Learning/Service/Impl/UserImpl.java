@@ -1,6 +1,17 @@
 package RestFul_Api.Learning.Service.Impl;
 
-public class UserImpl {
+import RestFul_Api.Learning.Enity.User;
+import RestFul_Api.Learning.Reposistory.Repository;
+import RestFul_Api.Learning.Service.UserInterface;
 
-    // now implement all the userinterface
+public class UserImpl implements UserInterface {
+
+    private Repository repository ;
+    @Override
+    public User CreateUser(User user) {
+
+    }
+
+    // now implement all the user interface
+
 }
