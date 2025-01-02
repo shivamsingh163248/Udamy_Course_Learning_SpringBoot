@@ -10,6 +10,8 @@ public class UserImpl implements UserInterface {
     @Override
     public User CreateUser(User user) {
 
+        // return the user save method to save the data
+        return repository.save(user) ;
     }
 
     // now implement all the user interface
