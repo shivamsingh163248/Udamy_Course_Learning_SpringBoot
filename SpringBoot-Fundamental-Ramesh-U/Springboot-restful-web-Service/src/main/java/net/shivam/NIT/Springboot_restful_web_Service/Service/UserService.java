@@ -16,5 +16,6 @@ public interface UserService {
     // creating the interface of the method of the all user
     //  the return the list of the all element of the database
     List<User>AllUser() ;
+    // creating a different interface
 
 }
