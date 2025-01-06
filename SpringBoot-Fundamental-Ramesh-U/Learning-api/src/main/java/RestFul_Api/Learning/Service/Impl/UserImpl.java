@@ -3,7 +3,11 @@ package RestFul_Api.Learning.Service.Impl;
 import RestFul_Api.Learning.Enity.User;
 import RestFul_Api.Learning.Reposistory.Repository;
 import RestFul_Api.Learning.Service.UserInterface;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
+@Service
+@AllArgsConstructor
 public class UserImpl implements UserInterface {
 
     private Repository repository ;
